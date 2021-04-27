@@ -55,7 +55,6 @@ const Star = () => {
         <button type="button" className="btn btn-dark" onChange={addPlanet}>Suivantes</button>
         </section>
     )
-    
 };
 
 export default Star;
