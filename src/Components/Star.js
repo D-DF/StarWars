@@ -19,7 +19,7 @@ const Star = () => {
                 return response.json()
             })
             .then((data) => {
-                // console.log(data)
+                console.log(data)
                 setPlanets(data.results)
             })
             .catch((error) => {
@@ -30,13 +30,11 @@ const Star = () => {
             })
     }, [])
     
-    const addPlanet = () => {
-        setPlanets(planet)
-    }
+    
 
     return (
         <section className="container py-5" >
-            <h1 class="mb-5">Planètes dans l'univers de Star Wars</h1>
+            <h1 className="mb-5">Planètes dans l'univers de Star Wars</h1>
             {loading && <p className="h1">Loading...</p>}
         <div className="row">
             {planet.map((el) => {
@@ -52,9 +50,10 @@ const Star = () => {
             })}
             
         </div>
-        <button type="button" className="btn btn-dark" onChange={addPlanet}>Suivantes</button>
+        <button type="button" className="btn btn-dark">Suivantes</button>
         </section>
     )
+    
 };
 
 export default Star;
